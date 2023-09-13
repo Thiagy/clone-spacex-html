@@ -1,0 +1,61 @@
+.box-text{
+    position: absolute;
+    left: 8vh;
+    top: 57.7vh;
+    display: flex;
+    flex-direction: column;
+    gap: 15vh;
+    color: white;
+    transition: gap 1s;
+}
+.box-title{
+    font-size: 20px;
+}
+.text{
+    font-size: 48px;
+}
+footer{ 
+    display: flex;
+    justify-content: center;
+    padding: 5.5vh 2vh;
+    background-color: black;
+}
+#footer-nav{
+    font-size: 11px;
+    text-align: center;
+    font-weight: 100;
+}
+@media (max-width: 1200px){
+    header{
+    justify-content: center;
+    }
+    #openmenu{
+    width: 45%;
+    }
+    #option-list, #shop-title{
+        display: none;
+    }
+    .option-list-ocult{
+        display: block;
+    }
+    #div-logo{
+        width: 26%;
+    }
+    .text{
+        font-size: 30px;
+    }
+}
+@media (max-width: 425px){
+    #openmenu{
+        width: 67.55%;
+       }
+    #div-logo{
+        width: 60%;
+    }
+    #footer-nav{
+        flex-direction: column;
+    }
+    #social-media-box{
+        font-size: 10px;
+    }
+}
