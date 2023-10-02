@@ -1,43 +1,34 @@
 var isOpen = false;
 document.getElementById("box-menu").addEventListener("click", toggleMenu);
 
-function toggleMenu(){
-
+function toggleMenu() {
     const body = document.body;
     const backdrop = document.getElementById("backdrop");
     const openMenuButton = document.getElementById("openmenu");
-    const littleBars = document.getElementsByClassName("little-bar");
+    const littleBars = document.querySelectorAll(".little-bar");
 
     isOpen = !isOpen;
 
-    if (isOpen) {
-        openMenuButton.style.right = 0;
-        body.style.overflow = "hidden";
-        backdrop.style.display = "block";
+    openMenuButton.style.right = isOpen ? 0 : "";
+    body.style.overflow = isOpen ? "hidden" : "";
+    backdrop.style.display = isOpen ? "block" : "";
 
-        littleBars[0].style.position = "absolute";
-        littleBars[0].style.bottom = "0";
-        littleBars[0].style.transform = "rotate(45deg)";
-
-        littleBars[1].style.display = "none";
-
-        littleBars[2].style.position = "absolute";
-        littleBars[2].style.transform = "rotate(-45deg)";
-        littleBars[2].style.bottom = "0";
-    } else {
-        openMenuButton.style.right = "";
-        body.style.overflow = "";
-        backdrop.style.display = "";
-
-        littleBars[0].style.position = "";
-        littleBars[0].style.bottom = "";
-        littleBars[0].style.transform = "";
-
-        littleBars[1].style.display = "";
-
-        littleBars[2].style.position = "";
-        littleBars[2].style.transform = "";
-        littleBars[2].style.bottom = "";
+    for (let i = 0; i < littleBars.length; i++) {
+        const bar = littleBars[i];
+        if (isOpen) {
+            bar.style.position = "absolute";
+            bar.style.bottom = "0";
+            bar.style.transform = i === 0 ? "rotate(45deg)" : i === 2 ? "rotate(-45deg)" : "";
+            if (i === 1) {
+                bar.style.display = "none";
+            }
+        } else {
+            bar.style.position = "";
+            bar.style.bottom = "";
+            bar.style.transform = "";
+            if (i === 1) {
+                bar.style.display = "";
+            }
+        }
     }
 }
-

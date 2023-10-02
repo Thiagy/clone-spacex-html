@@ -1,6 +1,7 @@
 var lastScrollTop = 0
-
+//Função que permite omitir o header quando a rolagem da página é feita pra baixo
 function scroll(){
+
     let distance_top = document.documentElement.scrollTop; 
     let header = document.getElementById("header")
 

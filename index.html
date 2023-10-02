@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imagem/favicon.png" type="image/x-icon">
     <title>Space x</title>
-    <link rel="stylesheet" href="./design/index.css">
     <link rel="stylesheet" href="./design/header.css">
+    <link rel="stylesheet" href="./design/homepage.css">
 </head>
 <body>
     <header id="header">
@@ -38,17 +38,6 @@
             </div>
         </nav><!--div shop and box menu-->
         <aside id="openmenu">
-            <a class='option_menu' href="">MISSION</a>
-            <hr class="line_option_menu">
-            <a class='option_menu' href="">LAUNCHES</a>
-            <hr class="line_option_menu">
-            <a class='option_menu' href="">CARRERS</a>
-            <hr class="line_option_menu">
-            <a class='option_menu' href="">UPDATES</a>
-            <hr class="line_option_menu">
-            <a class='option_menu' href="">SHOP</a>
-            <hr class="line_option_menu">
-    
             <!--option list ocult-->
             <div class="option-list-ocult">
                 <a class='option_menu' href="pages/index2.html">FALCON 9</a>
@@ -68,58 +57,23 @@
                 <a class='option_menu' href="">STARLINK</a>
                 <hr class="line_option_menu">
             </div>
+            <a class='option_menu' href="">MISSION</a>
+            <hr class="line_option_menu">
+            <a class='option_menu' href="">LAUNCHES</a>
+            <hr class="line_option_menu">
+            <a class='option_menu' href="">CARRERS</a>
+            <hr class="line_option_menu">
+            <a class='option_menu' href="">UPDATES</a>
+            <hr class="line_option_menu">
+            <a class='option_menu' href="">SHOP</a>
+            <hr class="line_option_menu">
             
         </aside><!--div open menu-->
         <div id="backdrop" onclick="openMenu()"></div>
     </header>
-    <section id="section-1" style="background-image: url('imagem/home/01.jpg');">
-        <div class="box-text">
-            <p class="box-title">RECENT LAUNCH</p>
-            <div>
-                <h1 class="text">CREW-6 MISSION</h1>
-                <button id="btn-white-border" class="btn-white-border">WATCH</button>
-            </div>
-        </div>
-        <a href="#section-2" id="down-arrow">
-            <img src="imagem/home/arrowDown.gif" alt="">
-        </a href="">
-    </section>
-    <section id="section-2" style="background-image: url('imagem/home/03.jpg');">
-        <div class="box-text">
-            <p class="box-title">UPCOMING LAUNCH</p>
-            <div>
-                <h1 class="text">STARLINK MISSION</h1>
-                <button class="btn-white-border">WATCH</button>
-            </div>
-        </div>
-    </section>
-    <section style="background-image: url('imagem/home/04.jpg');">
-        <div class="box-text">
-            <p class="box-title"></p>
-            <div>
-                <h1 class="text">STARSHIP UPDATE</h1>
-                <button class="btn-white-border">LEARN MORE</button>
-            </div>
-        </div>
-    </section>
-    <section style="background-image: url('imagem/home/05.jpg');">
-        <div class="box-text" id="box-text-section4">
-            <p></p>
-            <div>
-                <h1 class="text">STARSHIP SELECTED<br>BY NASA TO SUPPORT<br>SUSTAINED LUNAR<br>EXPLORATION</h1>
-                <button class="btn-white-border">LEARN MORE</button>
-            </div>
-        </div>
-    </section>
-    <section style="background-image: url('imagem/home/02.gif');">
-        <div class="box-text">
-            <p class="box-title">RECENT LAUNCH</p>
-            <div>
-                <h1 class="text">STARLINK MISSION</h1>
-                <button class="btn-white-border">REWATCH</button>
-            </div>
-        </div>
-    </section>
+    <!--Aqui é gerado o html das seções dinamicamente-->
+    <main>
+    </main>
     <footer>
         <nav id="footer-nav">
             <p style="color: #979797;" href="#">SPACEX © 2022</p>
@@ -134,7 +88,8 @@
     </footer>
     <p style="padding: 2vh 0; background-color: black;color: white; text-align: center;">Clone do site SpaceX feito por Thiago Rodrigues</p>
     <script src="src/headerscroll.js"></script>
-    <script src="src/scroll.js"></script>
+    <script src="src/createsectionhomepage.js"></script>
+    <script src="src/changescssforscroll.js"></script>
     <script src="src/openmenu.js"></script>
 </body>
 </html>

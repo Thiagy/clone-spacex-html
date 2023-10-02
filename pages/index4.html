@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="../imagem/favicon.png" type="image/x-icon">
 
   <link rel="stylesheet" href="../design/header.css">
-  <link rel="stylesheet" href="../design/index2.css">
+  <link rel="stylesheet" href="../design/falcon9anddragon.css">
   <title>Space x - Dragon</title>
   
 </head>
@@ -40,6 +40,26 @@
         </div>
     </nav><!--div shop and box menu-->
     <aside id="openmenu">
+      <!--option list ocult-->
+      <div class="option-list-ocult">
+        <a class='option_menu' href="index2.html">FALCON 9</a>
+        <hr class="line_option_menu">
+        <a class='option_menu' href="index3.html">HUMAN SPACEFLIGHT</a>
+        <hr class="line_option_menu">
+        <a class='option_menu' href="index4.html">DRAGON</a>
+        <hr class="line_option_menu">
+        <a class='option_menu' href="">STARSHIP</a>
+        <hr class="line_option_menu">
+        <a class='option_menu' href="">FALCON HEAVY</a>
+        <hr class="line_option_menu">
+        <a class='option_menu' href="">RIDESHARE</a>
+        <hr class="line_option_menu">
+        <a class='option_menu' href="">STARSHIELD</a>
+        <hr class="line_option_menu">
+        <a class='option_menu' href="">STARLINK</a>
+        <hr class="line_option_menu">
+    </div>
+    
       <a class='option_menu' href="">MISSION</a>
       <hr class="line_option_menu">
       <a class='option_menu' href="">LAUNCHES</a>
@@ -50,27 +70,6 @@
       <hr class="line_option_menu">
       <a class='option_menu' href="">SHOP</a>
       <hr class="line_option_menu">
-
-      <!--option list ocult-->
-      <div class="option-list-ocult">
-          <a class='option_menu' href="index2.html">FALCON 9</a>
-          <hr class="line_option_menu">
-          <a class='option_menu' href="index3.html">HUMAN SPACEFLIGHT</a>
-          <hr class="line_option_menu">
-          <a class='option_menu' href="index4.html">DRAGON</a>
-          <hr class="line_option_menu">
-          <a class='option_menu' href="">STARSHIP</a>
-          <hr class="line_option_menu">
-          <a class='option_menu' href="">FALCON HEAVY</a>
-          <hr class="line_option_menu">
-          <a class='option_menu' href="">RIDESHARE</a>
-          <hr class="line_option_menu">
-          <a class='option_menu' href="">STARSHIELD</a>
-          <hr class="line_option_menu">
-          <a class='option_menu' href="">STARLINK</a>
-          <hr class="line_option_menu">
-      </div>
-      
   </aside><!--div open menu-->
     <div id="backdrop" ></div>
   </header>
@@ -101,9 +100,6 @@
     <p id="box-text-secton-2">
         The Dragon spacecraft is capable of carrying up to 7 passengers to and from Earth orbit, and beyond. It is the only spacecraft currently flying that is capable of returning significant amounts of cargo to Earth, and is the first private spacecraft to take humans to the space station.
     </p>
-    <a href="#section-3" id="down-arrow">
-      <img src="../imagem/home/arrowDown.gif" alt="down-arrow">
-    </a>
   </section>
   <section id="section-3" style="overflow-x: hidden;"><!--slider space x-->
     <div style="width: 500%; height: 100%; display: flex; position: relative;">
@@ -230,26 +226,20 @@
       </div>
       <div id="rightArrow" class="arrowSlide" onclick="rightArrowSlide()"></div>
     </div>
-    <a href="#section-4" id="down-arrow">
-      <img src="../imagem/home/arrowDown.gif" alt="down-arrow">
-    </a>
   </section>
-  <section id="section-4" onclick="openVideo()" style="background-image: url('../imagem/falcon9/09.jpg'); cursor: pointer;">
-    <div class="box-text">
+  <section id="section-4" onclick="toggleVideo(true)" style="background-image: url('../imagem/falcon9/09.jpg'); cursor: pointer;">
+    <div id="box-text">
       <p class="box-title">VIDEO</p>
       <div>
           <h1 class="text">FALCON 9 IN FLIGHT</h1>
       </div>
   </div>
   <img id="img-play" src="../imagem/falcon9/play.png" alt="img-play">
-  <a href="#section-5" id="down-arrow">
-    <img src="../imagem/home/arrowDown.gif" alt="down-arrow">
-  </a>
   </section>
   <section id="section-video-ocult">
     <iframe width="80%"
     height="90%"  src="https://www.youtube.com/embed/78ATfCaBn6E" title="Crew Dragon | Interior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <div id="box-close" onclick="closeVideo()">
+    <div id="box-close" onclick="toggleVideo(false)">
       <div id="arrawClose1"></div>
       <div id="arrawClose2"></div>
     </div>
@@ -259,7 +249,7 @@
       <h4>engines</h4>
       <h1>MERLIN</h1>
     </div>
-    <div class="text-merlin">
+    <div id="text-merlin">
       <h4 style="margin-bottom: 8px;">SEA LEVEL | VACUM</h4>
       <p class="box-text-merlin">
         Merlin is a family of rocket engines developed by SpaceX for use on its Falcon 1, Falcon 9 and Falcon Heavy launch vehicles. Merlin engines use a rocket grade kerosene (RP-1) and liquid oxygen as rocket propellants in a gas-generator power cycle. The Merlin engine was originally designed for recovery and reuse.
@@ -275,9 +265,6 @@
       </div>
       <hr>
     </div>
-    <a href="#footer-falcon-9" id="down-arrow">
-      <img src="../imagem/home/arrowDown.gif" alt="down-arrow">
-    </a>
   </section>
   <footer id="footer-falcon-9" style="background-color: black;">
     <div class="box-services">
@@ -301,9 +288,9 @@
   </footer>
  
 
-  <script src="../src/scrollpg2.js"></script>
+  <script src="../src/showdatalauncheslandingreflight.js"></script>
   <script src="../src/openmenu.js"></script>
-  <script src="../src/pg.js"></script>
-  <script src="../src/slider.js"></script>
+  <script src="../src/sliderfalcon9.js"></script>
+  <script src="../src/upvideo.js"></script>
 </body>
 </html>

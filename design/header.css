@@ -6,6 +6,21 @@
     text-decoration: none;
     color: white;
 }
+::-webkit-scrollbar {
+    width: 8px;
+    height: 150px; 
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.45); 
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-track{
+    background-color: #f1f1f1;
+}
 html{
     scroll-behavior: smooth;
 }

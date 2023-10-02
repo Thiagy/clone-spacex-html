@@ -31,6 +31,25 @@
         <a href="">STARLINK</a>
     </nav>
     <aside id="openmenu">
+      <!--option list ocult-->
+      <div class="option-list-ocult">
+        <a class='option_menu' href="index2.html">FALCON 9</a>
+        <hr class="line_option_menu">
+        <a class='option_menu' href="index3.html">HUMAN SPACEFLIGHT</a>
+        <hr class="line_option_menu">
+        <a class='option_menu' href="index4.html">DRAGON</a>
+        <hr class="line_option_menu">
+        <a class='option_menu' href="">STARSHIP</a>
+        <hr class="line_option_menu">
+        <a class='option_menu' href="">FALCON HEAVY</a>
+        <hr class="line_option_menu">
+        <a class='option_menu' href="">RIDESHARE</a>
+        <hr class="line_option_menu">
+        <a class='option_menu' href="">STARSHIELD</a>
+        <hr class="line_option_menu">
+        <a class='option_menu' href="">STARLINK</a>
+        <hr class="line_option_menu">
+    </div>
         <a class='option_menu' href="">MISSION</a>
         <hr class="line_option_menu">
         <a class='option_menu' href="">LAUNCHES</a>
@@ -42,26 +61,6 @@
         <a class='option_menu' href="">SHOP</a>
         <hr class="line_option_menu">
 
-        <!--option list ocult-->
-        <div class="option-list-ocult">
-            <a class='option_menu' href="index2.html">FALCON 9</a>
-            <hr class="line_option_menu">
-            <a class='option_menu' href="index3.html">HUMAN SPACEFLIGHT</a>
-            <hr class="line_option_menu">
-            <a class='option_menu' href="index4.html">DRAGON</a>
-            <hr class="line_option_menu">
-            <a class='option_menu' href="">STARSHIP</a>
-            <hr class="line_option_menu">
-            <a class='option_menu' href="">FALCON HEAVY</a>
-            <hr class="line_option_menu">
-            <a class='option_menu' href="">RIDESHARE</a>
-            <hr class="line_option_menu">
-            <a class='option_menu' href="">STARSHIELD</a>
-            <hr class="line_option_menu">
-            <a class='option_menu' href="">STARLINK</a>
-            <hr class="line_option_menu">
-        </div>
-        
     </aside><!--div open menu-->
     <div id="backdrop" ></div>
     <nav id="div-shop">
@@ -84,7 +83,7 @@
   </section>
   <section id="section-2" style="overflow-x: hidden; background-color: black; height: 120vh;"><!--slider space x-->
     <div id="box-sliders">
-      <div class="div-slide" id="first-divslide" onclick="openVideo(1)">
+      <div class="div-slide" id="first-divslide" onclick="toggleVideo(true)">
         <div class="box-title-slide">
           <h4>ON-ORBIT</h4>
           <h1>View Earth from 300km up</h1>
@@ -92,7 +91,7 @@
         <img src="../imagem/humanFlight/on-orbit.jpg" alt="">
         <img id="img-play" src="../imagem/falcon9/play.png" alt="img-play">
       </div>
-      <div class="div-slide" onclick="openVideo(2)">
+      <div class="div-slide" onclick="toggleVideo(true)">
         <div class="box-title-slide">
           <h4>LAUNCH</h4>
           <p>Watch as the crew prepares for liftoff</p>
@@ -100,7 +99,7 @@
         <img src="../imagem/humanFlight/launch-crop.jpg" alt="">
         <img id="img-play" src="../imagem/falcon9/play.png" alt="img-play">
       </div>
-      <div class="div-slide" onclick="openVideo(3)">
+      <div class="div-slide" onclick="toggleVideo(true)">
         <div class="box-title-slide">
           <h4>SPLASHDOWN</h4>
           <p>Watch as the crew prepares for landing</p>
@@ -108,22 +107,13 @@
         <img id="img-play" src="../imagem/falcon9/play.png" alt="img-play">
         <img src="../imagem/humanFlight/Splashdown_Photo_01.jpg" alt="">
       </div>
-      <div class="div-slide" onclick="openVideo(4)">
+      <div class="div-slide" onclick="toggleVideo(true)">
         <div class="box-title-slide">
           <h4>TRAINNING</h4>
           <p>Watch as crew prepares for launch day</p>
         </div>
         <img id="img-play" src="../imagem/falcon9/play.png" alt="img-play">
         <img src="../imagem/humanFlight/Training_01.jpg" alt="">
-      </div>
-      <div class="div-slide" onclick="openVideo(5)">
-        <div class="box-title-slide">
-          <h4>FALCON 9</h4>
-          <h1>PAYLOAD</h1>
-          <h4>FAIRING | DRAGON</h4>
-        </div>
-        <img id="img-play" src="../imagem/falcon9/play.png" alt="img-play">
-        <img src="https://pbs.twimg.com/profile_images/1650378253939486721/hbOSuQeb_400x400.jpg" alt="">
       </div>
     </div>
     <div class="box-naviation">
@@ -133,7 +123,6 @@
         <div class="optionNav" onclick="slider(2)"></div>
         <div class="optionNav" onclick="slider(3)"></div>
         <div class="optionNav" onclick="slider(4)"></div>
-        <div class="optionNav" onclick="slider(5)"></div>
       </div>
       <div id="rightArrow" class="arrowSlide" onclick="rightArrowSlide()"></div>
     </div>
@@ -148,7 +137,7 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
       allowfullscreen>
     </iframe>
-    <div id="box-close" onclick="openVideo()">
+    <div id="box-close" onclick="toggleVideo(false)">
       <div id="arrawClose1"></div>
       <div id="arrawClose2"></div>
     </div>
@@ -198,24 +187,23 @@
   <footer id="footer-human-spaceflight">
     <div style='overflow-x: hidden; position: relative; height: 60%;'>
       <div id="slider-footer">
-        <div class="pecture-section" style="background-image: url('../imagem/humanFlight/slider-footer/1.jpg');" id="first-divslide-footer"></div>
-        <div class="pecture-section" style="background-image: url('../imagem/humanFlight/slider-footer/2.webp');"></div>
-        <div class="pecture-section" style="background-image: url('../imagem/humanFlight/slider-footer/3.jpg');"></div>
-        <div class="pecture-section" style="background-image: url('../imagem/humanFlight/slider-footer/4.jpeg');"></div>
-        <div class="pecture-section" style="background-image: url('../imagem/humanFlight/slider-footer/5.jpg');"></div>
-        <div class="pecture-section" style="background-image: url('../imagem/humanFlight/slider-footer/6.webp');"></div>
-        <div class="pecture-section" style="background-image: url('../imagem/humanFlight/slider-footer/7.webp');"></div>
-        <div class="pecture-section" style="background-image: url('../imagem/humanFlight/slider-footer/8.webp');"></div>
-        <div class="pecture-section" style="background-image: url('../imagem/humanFlight/slider-footer/9.jpg');"></div>
-        <div class="pecture-section" style="background-image: url('../imagem/humanFlight/slider-footer/10.webp');"></div>
-        <div class="pecture-section" style="background-image: url('../imagem/humanFlight/slider-footer/11.webp');"></div>
-        <div class="pecture-section" style="background-image: url('../imagem/humanFlight/slider-footer/12.jpg');"></div>
-        <div class="pecture-section" style="background-image: url('../imagem/humanFlight/slider-footer/13.webp');"></div>
+        <div class="picture-section" style="background-image: url('../imagem/humanFlight/slider-footer/1.jpg');" id="first-divslide-footer"></div>
+        <div class="picture-section" style="background-image: url('../imagem/humanFlight/slider-footer/2.webp');"></div>
+        <div class="picture-section" style="background-image: url('../imagem/humanFlight/slider-footer/3.jpg');"></div>
+        <div class="picture-section" style="background-image: url('../imagem/humanFlight/slider-footer/4.jpeg');"></div>
+        <div class="picture-section" style="background-image: url('../imagem/humanFlight/slider-footer/5.jpg');"></div>
+        <div class="picture-section" style="background-image: url('../imagem/humanFlight/slider-footer/6.webp');"></div>
+        <div class="picture-section" style="background-image: url('../imagem/humanFlight/slider-footer/7.webp');"></div>
+        <div class="picture-section" style="background-image: url('../imagem/humanFlight/slider-footer/8.webp');"></div>
+        <div class="picture-section" style="background-image: url('../imagem/humanFlight/slider-footer/9.jpg');"></div>
+        <div class="picture-section" style="background-image: url('../imagem/humanFlight/slider-footer/10.webp');"></div>
+        <div class="picture-section" style="background-image: url('../imagem/humanFlight/slider-footer/11.webp');"></div>
+        <div class="picture-section" style="background-image: url('../imagem/humanFlight/slider-footer/12.jpg');"></div>
+        <div class="picture-section" style="background-image: url('../imagem/humanFlight/slider-footer/13.webp');"></div>
       </div>
       <div class="box-naviation-footer">
-        <div id="leftArrow-footer" class="arrowSlide" onclick="leftArrowFooter()"></div>
+        <div id="leftArrow-footer" class="arrowSlide" onclick="lArrowFooter()"></div>
         <div class="navigation-footer">
-          <div class="optionNav-footer" style="background-color: white;" onclick="sliderFooter(0)"></div>
           <div class="optionNav-footer" onclick="sliderFooter(1)"></div>
           <div class="optionNav-footer" onclick="sliderFooter(2)"></div>
           <div class="optionNav-footer" onclick="sliderFooter(3)"></div>
@@ -226,8 +214,9 @@
           <div class="optionNav-footer" onclick="sliderFooter(8)"></div>
           <div class="optionNav-footer" onclick="sliderFooter(9)"></div>
           <div class="optionNav-footer" onclick="sliderFooter(10)"></div>
+          <div class="optionNav-footer" onclick="sliderFooter(11)"></div>
         </div>
-        <div id="rightArrow-footer" class="arrowSlide" onclick="rightArrowFooter()"></div>
+        <div id="rightArrow-footer" class="arrowSlide" onclick="rArrowFooter()"></div>
       </div>
     </div>
     <nav class="nav-footer">
@@ -244,8 +233,8 @@
 
   <script src="../src/headerscroll.js"></script>
   <script src="../src/openmenu.js"></script>
-  <script src="../src/sliderHumanFlght.js"></script>
-  <script src="../src/slider.js"></script>
+  <script src="../src/upvideo.js"></script>
+  <script src="../src/sliderhumanflight1.js"></script>
   <script src="../src/sliderfooter.js"></script>
 </body>
 </html>

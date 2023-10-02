@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="../imagem/favicon.png" type="image/x-icon">
 
   <link rel="stylesheet" href="../design/header.css">
-  <link rel="stylesheet" href="../design/index2.css">
+  <link rel="stylesheet" href="../design/falcon9anddragon.css">
   <title>Falcon 9</title>
   
 </head>
@@ -40,19 +40,8 @@
         </div>
     </nav><!--div shop and box menu-->
     <aside id="openmenu">
-      <a class="option_menu" href="">MISSION</a>
-      <hr class="line_option_menu">
-      <a class="option_menu" href="">LAUNCHES</a>
-      <hr class="line_option_menu">
-      <a class="option_menu" href="">CARRERS</a>
-      <hr class="line_option_menu">
-      <a class="option_menu" href="">UPDATES</a>
-      <hr class="line_option_menu">
-      <a class="option_menu" href="">SHOP</a>
-      <hr class="line_option_menu">
-
-      <!--option list ocult-->
-      <div class="option-list-ocult">
+       <!--option list ocult-->
+       <div class="option-list-ocult">
           <a class="option_menu" href="index2.html">FALCON 9</a>
           <hr class="line_option_menu">
           <a class="option_menu" href="index3.html">HUMAN SPACEFLIGHT</a>
@@ -70,6 +59,16 @@
           <a class="option_menu" href="">STARLINK</a>
           <hr class="line_option_menu">
       </div>
+      <a class="option_menu" href="">MISSION</a>
+      <hr class="line_option_menu">
+      <a class="option_menu" href="">LAUNCHES</a>
+      <hr class="line_option_menu">
+      <a class="option_menu" href="">CARRERS</a>
+      <hr class="line_option_menu">
+      <a class="option_menu" href="">UPDATES</a>
+      <hr class="line_option_menu">
+      <a class="option_menu" href="">SHOP</a>
+      <hr class="line_option_menu">
      </aside><!--div open menu-->
     <div id="backdrop"></div>
   </header>
@@ -100,12 +99,9 @@
     <p id="box-text-secton-2">
       Falcon 9 is a reusable, two-stage rocket designed and manufactured by SpaceX for the reliable and safe transport of people and payloads into Earth orbit and beyond. Falcon 9 is the world's first orbital class reusable rocket. Reusability allows SpaceX to refly the most expensive parts of the rocket, which in turn drives down the cost of space access.
     </p>
-    <a href="#section-3" id="down-arrow">
-      <img src="../imagem/home/arrowDown.gif" alt="down-arrow">
-    </a>
   </section>
   <section id="section-3" style="overflow-x: hidden;"><!--slider space x-->
-    <div style="width: 500%; height: 100%; display: flex; position: relative;">
+    <div id="box_slider">
       <div class="div-slide" id="first-divslide" style="background-image: url('../imagem/falcon9/03.jpg');">
         <div class="box-title-slide">
           <h4>FALCON 9</h4>
@@ -229,21 +225,15 @@
       </div>
       <div id="rightArrow" class="arrowSlide" onclick="rightArrowSlide()"></div>
     </div>
-    <a href="#section-4" id="down-arrow">
-      <img src="../imagem/home/arrowDown.gif" alt="down-arrow">
-    </a>
   </section>
-  <section id="section-4" onclick="openVideo()" style="background-image: url('../imagem/falcon9/09.jpg'); cursor: pointer;">
-    <div class="box-text">
+  <section id="section-4" onclick="toggleVideo(true)" style="background-image: url('../imagem/falcon9/09.jpg'); cursor: pointer;">
+    <div id="box-text">
       <p class="box-title">VIDEO</p>
       <div>
           <h1 class="text">FALCON 9 IN FLIGHT</h1>
       </div>
   </div>
   <img id="img-play" src="../imagem/falcon9/play.png" alt="img-play">
-  <a href="#section-5" id="down-arrow">
-    <img src="../imagem/home/arrowDown.gif" alt="down-arrow">
-  </a>
   </section>
   <section id="section-video-ocult">
     <iframe 
@@ -255,17 +245,17 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         allowfullscreen>
     </iframe>
-    <div id="box-close" onclick="closeVideo()">
+    <div id="box-close" onclick="toggleVideo(false)">
       <div id="arrawClose1"></div>
       <div id="arrawClose2"></div>
     </div>
   </section>
   <section id="section-5" style="background-image: url('../imagem/falcon9/08.jpg');">
-    <div class="box-title" style="padding: 1vh 0 1vh 10vh;">
+    <div class="box-title">
       <h4>engines</h4>
       <h1>MERLIN</h1>
     </div>
-    <div class="text-merlin">
+    <div id="text-merlin">
       <h4 style="margin-bottom: 8px;">SEA LEVEL | VACUM</h4>
       <p class="box-text-merlin">
         Merlin is a family of rocket engines developed by SpaceX for use on its Falcon 1, Falcon 9 and Falcon Heavy launch vehicles. Merlin engines use a rocket grade kerosene (RP-1) and liquid oxygen as rocket propellants in a gas-generator power cycle. The Merlin engine was originally designed for recovery and reuse.
@@ -281,14 +271,11 @@
       </div>
       <hr>
     </div>
-    <a href="#footer-falcon-9" id="down-arrow">
-      <img src="../imagem/home/arrowDown.gif" alt="down-arrow">
-    </a>
   </section>
   <footer id="footer-falcon-9" style="background-color: black;">
     <div class="box-services">
       <div class="haste"></div>
-      <p style="font-size: 14px;">For information about our launch services, contact sales@spacex.com</p>
+      
       <div class="box-button">
         <button>DOWNLOADS USER'S GUIDE</button>
         <button>CAPABILITIES AND SERVICES</button>
@@ -305,11 +292,10 @@
       <a href="#">SUPPLIERS</a>
     </nav>
   </footer>
- 
 
-  <script src="../src/scrollpg2.js"></script>
+  <script src="../src/showdatalauncheslandingreflight.js"></script>
   <script src="../src/openmenu.js"></script>
-  <script src="../src/pg.js"></script>
-  <script src="../src/slider.js"></script>
+  <script src="../src/sliderfalcon9.js"></script>
+  <script src="../src/upvideo.js"></script>
 </body>
 </html>
