@@ -54,23 +54,5 @@ function updateVideoIfrmae(option){
     }
 
 }
-//Função que sobe a div do video do iframe
-async function openVideo() {
-    let video = document.getElementById('section-video-ocult');
-
-    upVideo = !upVideo;
-    if (upVideo) {
-        video.style.bottom = '0';
-        document.body.style.overflow='hidden'
-    } else {
-        document.body.style.overflow=''
-        video.style.bottom = '200%';
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        video.style.display = 'none';
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        video.style.bottom = '';
-        video.style.display = '';
-    }
-}
 
 slider(1)
