@@ -5,6 +5,13 @@ const optionNav = document.querySelectorAll('.optionNav');
 const rightArrow = document.getElementById('rightArrow');
 const leftArrow = document.getElementById('leftArrow');
 const firstDivSlide = document.getElementById('first-divslide');
+//Lista de url de iframes da página HumanFlight
+const iframes = [
+    'https://www.youtube.com/embed/A_sEusdoTIM',
+    'https://www.youtube.com/embed/TeVbYCIFVa8',
+    'https://www.youtube.com/embed/oTH3mq7SsK4',
+    'https://www.youtube.com/embed/FMi_m9-e9MU'
+]
 
 //Função que perimte deslocar as imagens
 function slider(num){
@@ -40,19 +47,11 @@ function updateVideoIfrmae(option){
 
     let frameSlide = document.getElementById('frame-slide')
 
-    if(option===1){
-        frameSlide.src='https://www.youtube.com/embed/A_sEusdoTIM'
+    for(let n = 0; n < iframes.length; n++){
+        if(option===(n + 1)){
+            frameSlide.src=iframes[n]
+        }
     }
-    if(option===2){
-    frameSlide.src='https://www.youtube.com/embed/TeVbYCIFVa8'
-    }
-    if(option===3){
-    frameSlide.src='https://www.youtube.com/embed/oTH3mq7SsK4'
-    }
-    if(option===4){
-    frameSlide.src='https://www.youtube.com/embed/FMi_m9-e9MU'
-    }
-
 }
 
 slider(1)
