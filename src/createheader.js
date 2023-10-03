@@ -58,6 +58,7 @@ function getlogo(){
 //Função que gera a opções na barra de navegação dinamicamente
 function getoptionlist(){
     option_list.forEach(newoption=> {createoptionlist(newoption)})
+    option_list.forEach(newoption=> {createoptionlistmenuocult(newoption)})
 }
 //Função que cria html da logo
 function createLogo(letter){
@@ -72,6 +73,21 @@ function createoptionlist(newoption){
     option.href= newoption.href
     option.innerText= newoption.text
     document.getElementById('option-list').appendChild(option)
+}
+//Função que cria html do menu
+function createoptionlistmenuocult(newoption){
+    const option = document.createElement('a')
+    const row = document.createElement('hr')
+
+    option.setAttribute('class', 'option_menu')
+    row.setAttribute('class', 'line_option_menu')
+
+    option.href= newoption.href
+    option.innerText= newoption.text
+
+    const option_list_ocult = document.getElementById('option-list-ocult')
+    option_list_ocult.appendChild(option)
+    option_list_ocult.appendChild(row)
 }
 //Função que cria html do botão que abre menu
 function createbuttonopenmenu() {
