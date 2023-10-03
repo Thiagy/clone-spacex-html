@@ -24,7 +24,7 @@ async function getreflights(){
 
     titleNumber3.innerText= reflights[0].mass.kg
 }
-
+//Função que altera o css durante a rolagem da página
 async function scroll(){
     let distance_top = document.documentElement.scrollTop;
 

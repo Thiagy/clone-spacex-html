@@ -1,6 +1,6 @@
 var isOpen = false;
 document.getElementById("box-menu").addEventListener("click", toggleMenu);
-
+//Função que permite abrir o menu
 function toggleMenu() {
     const body = document.body;
     const backdrop = document.getElementById("backdrop");

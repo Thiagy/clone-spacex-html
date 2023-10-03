@@ -1,4 +1,4 @@
-//Função que permite subir um video para vizualizar
+//Função que permite subir um video para vizualização
 async function toggleVideo(isOpen) {
 
   const video = document.getElementById('section-video-ocult');

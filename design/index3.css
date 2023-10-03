@@ -1,3 +1,4 @@
+/*Seção principal de HumanFlight*/
 #box-text-main{
     display: flex;
     flex-direction: column;
@@ -118,6 +119,7 @@
     margin-left: 0;
     transition: 1s;
 }
+/*Caixa de navegação*/
 .box-naviation{
     padding: 0 5vh;
     display: flex;
